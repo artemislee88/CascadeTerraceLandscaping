@@ -3,27 +3,27 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CascadeTerraceLandscaping</title>
+    <title>Cascade Terrace Landscaping  - @ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CascadeTerraceLandscaping.styles.css" asp-append-version="true" />
 </head>
-<body>
+<body class="d-flex flex-column justify-content-between">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">CascadeTerraceLandscaping</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Cascade Terrace Landscaping</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="navbar-nav flex-grow-1 justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Services">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/ContactUs">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -31,14 +31,28 @@
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="d-flex flex-column justify-content-between">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - CascadeTerraceLandscaping - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <footer class="text-light mt-3 p-4">
+        <div class="container d-flex justify-content-between">
+            <span>
+                Photo by
+                <a href="https://unsplash.com/&#64danielwatsondesign?utm_source=unsplash&amp&#59utm_medium=referral&amp&#59utm_content=creditCopyText" target="_blank" class="text-light">
+                    Daniel Watson
+                </a>
+                on
+                <a href="https://unsplash.com/?utm_source=unsplash&amp&#59utm_medium=referral&amp&#59utm_content=creditCopyText" target="_blank" class="text-light">
+                    Unsplash
+                </a>
+            </span>
+            <span>
+            &copy; @{
+                DateTime now = DateTime.Now;
+            } @now.Year - Cascade Terrace Landscaping
+            </span>
         </div>
     </footer>
 
