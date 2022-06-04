@@ -1,18 +1,52 @@
 html {
-  font-size: 14px;
+	font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+	html {
+		font-size: 16px;
+	}
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+	position: relative;
+	min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+	min-height: 100vh;
+	background: url('/img/daniel-watson-8vBpYpTGo90-unsplash.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+
+.terrace-btn {
+	color: #fff;
+	background-color: #ea646e;
+	border-color: #ea646e;
+}
+
+.terrace-link {
+	color: #ea646e;
+}
+
+.overlay {
+	position: relative;
+}
+
+.overlay::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #b9bca3;
+	display: block;
+	opacity: 0.40;
+}
+
+.overlay-content {
+	z-index: 99;
+	position: relative;
+	text-shadow: 2px 2px #001f2a;
 }
